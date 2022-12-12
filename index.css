@@ -1,0 +1,980 @@
+/* шрифты */
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Tinos', serif;
+Опен санс болд регуляр и италик и тинос регуляр */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1150px;
+    color: #fff;
+}
+.line{
+    background-image: linear-gradient(to right, #fff 40%, #A5A5A5 40%);
+    background-size: 20px 10px;
+    background-repeat: repeat-x;
+    height: 1px;
+    flex-grow: 3;
+  }
+.burger{
+    position: relative;
+    display: none;
+    padding: 15px;
+}
+.burger ul{
+    display: none;
+    background-color: #FF7400;
+    width: 150px;
+    height: 200px;
+    padding-top: 10px;
+    /* transform: translateX(400px);  */
+}
+.burger ul li:not(:last-child){
+    margin-bottom: 20px;
+}
+.burger:hover ul{
+ display: block;
+ position: absolute;
+ left: -105px;
+ text-align: center;
+ /* transform: translateX(0); */
+}
+.burger a{
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.burger a:hover{
+    color: #000;
+}
+.button {
+    width: 157px;
+    height: 47px;
+    background-color: #FF7400;
+    border: none;
+    color: #fff;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.3;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.button:hover{
+    background-color: #FF9400;
+}
+.button__bar-menu{
+    width: 220px;
+    height: 50px;
+    background: #D67E34;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    border: none;
+    color: #fff;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.3;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.button__bar-menu:hover{
+    background-color: #FF9400;
+}
+
+/* header */
+.header {
+    background-image: url("image/bg_header.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 800px;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px;
+    margin-bottom: 203px;
+}
+
+.header__inner-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__basket {
+    padding: 20px 0;
+    padding-right: 21px;
+    border-right: #fff 1px solid;
+}
+
+.header__inner-link {
+    margin-left: 30px;
+}
+
+.header__inner-link a {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.3;
+    color: inherit;
+    transition: all 0.3s linear;
+}
+.header__inner-link a:hover{
+    color:#FF7400;
+}
+
+.header__inner-link p {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.header__inner-button {
+    margin-left: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.header__caption {
+    color: #D67E35;
+    display: flex;
+    /* margin-left: 15px; */
+}
+
+.header__caption-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__caption-discription:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 62px;
+    background: #fff;
+    left: -70px;
+    bottom: 12px;
+}
+
+/* Вот этот бефор афтер хуй его знает и мерджины у этьой хуйни выглядят хуево максимально, но в целом гуд!!  */
+
+.header__caption-discription:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 62px;
+    background: #fff;
+    left: 175px;
+    bottom: 12px;
+}
+
+.header__caption-discription {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    position: relative;
+    margin-bottom: 21px;
+    
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+
+.header__caption-greetings {
+    font-family: 'Tinos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 1.1;
+}
+
+.header__caption-title {
+    font-family: 'Tinos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 1.1;
+
+    color: #D67E35;
+}
+
+/* nav */
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav ul li {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.nav ul li {
+    margin-right: 25px;
+}
+.nav a{
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.nav a:hover{
+    color: #FF7400;
+}
+/* section__history */
+.section{
+    margin-bottom: 122px;
+}
+.card{
+    display: flex;
+    color: #000;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    top: -90px;
+    left: 0;
+}
+.section__card{
+    width: 33.333%;
+    background: #FFFFFF;
+    box-shadow: 10px 10px 40px 20px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    max-width: 362px;
+    height: 328px;
+}
+.section__card:not(:first-child){
+    margin-left: 32px;
+}
+.img__card{
+    align-items: center;
+    text-align: center;
+    margin-top: 49px;
+}
+.section__card-title{
+    font-family: 'Tinos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.section__card-title span{
+    color: #BC9060;
+}
+.section__card-discription{
+    font-family: 'Tinos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    color:#656363;
+}
+
+.section__history-inner{
+    display: flex;
+    justify-content: space-between;
+}
+.section__history-wrapper{
+   max-width: 444px;
+   text-align: center;
+   margin-top: 5px;
+}
+.section__history-img{
+    width: 100%;
+    height: auto;
+}
+.section__history-text{
+    font-family: 'Tinos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 62px;
+    color: #000000;
+    margin-bottom: 21px;
+}
+.section__history-text span{
+    color: #D67E34;
+}
+.section__history-discription{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #656363;
+    margin-bottom: 82px;
+}
+.section__history-report{
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section__history-report-inner:not(:first-child){
+    margin-left: 35px;
+}
+.section__history-report-inner-number{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 54px;
+    text-align: center;
+    color: #BC9060;
+}
+.section__history-report-inner-text{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+
+    color: #000000;
+}
+/* section__order */
+.section__order{
+    background: url('image/bg_section_order.png') repeat-x;
+}
+.section__order-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 108px;
+    margin-bottom: 132px;
+}
+.section__order-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.section__order-title{
+    font-family: 'Tinos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 60px;
+    color: #D67E34;
+    margin-bottom: 20px;
+}
+.section__order-disctiption{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #FFFFFF;
+
+}
+.section__order-food{
+    margin-bottom: 150px;
+}
+.section__order-food-pizza img{
+    height: 478px;
+}
+.section__order-food-burger{
+    flex-grow: 2;
+}
+.food__menu-inner{
+    display: flex;
+}
+.food__menu-help-wrapper{
+    display: flex;
+    flex-grow: 2;
+    align-items: center;
+}
+.section__order-food-title{
+    font-family: 'Tinos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 62px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 139px;
+}
+.section__order-food-title span{
+    color: #D67E34;
+}
+.section__order-food-menu{
+    display: flex;
+    gap: 30px;
+}
+.food__menu-price{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.food__menu-price:not(:last-child){
+    margin-bottom: 29px;
+}
+.food__menu-img-product{
+    margin-right: 30px;
+}
+.food__menu-products-name{
+    font-family: 'Tinos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    color: #000000;
+    margin-right: 7px;
+}
+.food__menu_product-price{
+    
+    font-family: 'Tinos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    color: #000000;
+    margin-left: 11px;
+}
+/* section__bar */
+.section__bar{
+    background-image: url('image/bg_bar.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1036px;
+    background-size: cover;
+}
+/* Спросить про все бг картинки, с ними мега сложности */
+.section__bar--title{
+    padding-top: 100px;
+    margin-bottom: 138px;
+    font-family: 'Tinos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 62px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+}
+.section__bar-menu{
+    display: flex;
+}
+.bar__menu-block{
+    background-color: #fff;
+    width: 350px;
+    height: 510px;
+    text-align: center;
+    padding-top: 80px;
+}
+.bar__menu-block + .bar__menu-block{
+    margin-left: 30px;
+}
+.bar__menu-img{
+    position: relative;
+    margin-bottom: 20px;
+}
+.bar__menu-price{
+    width: 100px;
+    height: 100px;
+    background: #D67E34;
+    border: 7px solid #FFFFFF;
+    border-radius: 100px;
+    position: absolute;
+    bottom: 7px;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 33px;
+}
+.bar__menu-title{
+    font-family: 'Tinos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    color: #000000;
+    margin-bottom: 17px;
+}
+.bar__menu-discription{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 20px;
+}
+/* section-rewievs */
+.section-rewievs{
+    background-color: #E5E5E5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 101px;
+}
+.rewievs__user{
+    padding-top: 104px;
+    text-align: center;
+    width: 850px;
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.rewievs__photo{
+    margin-bottom: 16px;
+}
+.rewiews__job{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+    margin-bottom: 9px;
+}
+.rewiews__name{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+    padding-bottom: 138px;
+}
+/* section__gallery */
+.section__gallery{
+    position: relative;
+}
+.section__gallery-min{
+    display: flex;
+}
+.section__gallery-min img:last-child{
+    min-height: 274px;
+}
+.section__gallery-decoration-left{
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    background-color: #FF0000;
+    top: 122px;
+    left: 0;
+}
+.section__gallery-decoration-right{
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    background-color: #FF0000;
+    top: 122px;
+    right: 0;
+}
+.section__gallery-food{
+    margin-bottom: 100px;
+}
+.section__gallery-food-title{
+    font-family: 'Tinos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 62px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.section__gallery-food-title span{
+    color: #D67E34;
+}
+.section__gallery-block-inner{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.section__gallery-block-inner:not(:last-child){
+    margin-bottom: 30px;
+}
+.section__gallery-img-max{
+    max-width: 540px;
+    max-height: 274px;
+}
+.section__gallery-img-min{
+    max-width: 253px;
+    height: 274px;
+}
+.section__gallery-img-min + .section__gallery-img-min{
+ margin-left: 30px;
+}
+.section__gallery-cook{
+    margin-bottom: 100px;
+}
+.section__gallery-cook-img{
+    width: 33%;
+    height: auto;
+}
+.section__gallery-cook-title{
+    font-family: 'Tinos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 62px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 107px;
+}
+.section__gallery-cook-title span{
+    color: #D67E34;
+}
+.section__gallery-cook-block{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.section__gallery-footer{
+    background-image: url("image/bg_logo_footer.jpg");
+    background-repeat: no-repeat;
+    height: 732px;
+    background-position: center;
+    background-size: cover;
+}
+@media (max-width: 1200px) {
+    .container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .section__card:not(:first-child){
+        margin-left: 15px;
+    }
+}
+@media (max-width:1170px){
+    .section__card{
+        width: 100%;
+        max-width: 100%;
+        margin: 0 15px;
+    }
+    .section__card:not(:last-child){
+        margin-bottom: 20px;
+    }
+
+    .food__menu-price{
+        justify-content: baseline;
+    }
+    .food__menu-img-product{
+        margin-right: 5px;
+    }
+    .section__gallery-block-inner{
+        flex-wrap: wrap;
+    }
+    .section__gallery-cook-block{
+        gap: 10px;
+    }
+}
+@media (max-width:900px){
+    .nav ul li{
+        font-size: 12px;
+    }
+    .header__inner-link{
+        margin-left: 15px;
+    }
+    .header__inner-link a{
+        font-size: 14px;
+    }
+    .section__order-food-pizza img{
+    height: 670px;
+    width: 550px;
+    }
+    .section__gallery-cook-block img{
+    }
+    .rewievs__user{
+        width: fit-content;
+    }
+    .section__order-food-pizza{
+        display: none;
+    }
+    .header__inner-link p{
+        display: none;
+    }
+    .header__inner-button{
+        width: 140px;
+    }
+}
+@media (max-width:786px){
+    .header__inner-img-logo img{
+        width: 41px;
+        height: 31px;
+        align-items: center;
+    }
+    .nav {
+        display: none;
+    }
+    .burger{
+        display: block;
+    }
+    .header__inner-link{
+        display: none;
+    }
+    .header__inner-button{
+        display: none;
+    }
+    .header__caption-greetings{
+        font-size: 35px;
+    }
+    .header__caption-title{
+        font-size: 65px;
+    }
+    .food__menu-products-name{
+        font-size: 18px;
+    }
+    .food__menu_product-price{
+        font-size: 18px;
+    }
+    .bar__menu-img img{
+        width: 175px;
+    }
+    .bar__menu-price{
+        right: 15px;
+    }
+    .section__order-inner{
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .section__order-food-title{
+        margin-bottom: 40px;
+    }
+    .section__order-food{
+        margin-bottom: 40px;
+    }
+    .bar__menu-block:last-child{
+        display: none;
+    }
+    .section__history-inner{
+        display: block;
+        justify-content: center;
+    }
+    .section__history-discription{
+        margin-bottom: 40px;
+    }
+    .section__history-report{
+        margin-bottom: 40px;
+    }
+    .section__history-wrapper{
+        max-width: 100%;
+    }
+    .section__order-inner{
+        display: block;
+    }
+    .section__order-disctiption{
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:650px){
+    .section__gallery-decoration-left{
+        display: none;
+    }
+    .section__gallery-decoration-right{
+        display: none;
+    }
+    .section__order-title{
+        font-size: 35px;
+    }
+    .section__order-disctiption{
+        font-size: 20px;
+    }
+    .section__gallery-img-max{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .section__gallery-min img{
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+        position: center center;
+        size: cover;
+    }
+    .section__order-food-menu{
+        display: block;
+    }
+    .section__order-food-pizza{
+        display: block;
+    }
+    .section__order-food-pizza img{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width:600px){
+    .header__caption-greetings {
+        font-size: 25px;
+    }
+    .header__caption-title {
+        font-size: 45px;
+    }
+    .header__caption{
+        display: block;
+    }
+    .header__caption-discription{
+        font-size: 15px;
+    }
+    .header__caption-discription:before{
+        display: none;
+    }
+    .header__caption-discription:after{
+        display: none;
+    }
+    .section__order-title{
+        font-family: 'Tinos';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 34px;
+        text-align: center;
+        margin-bottom: 15px;
+        color: #D67E34;
+    }
+    .section__order-disctiption{
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 33px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .section__gallery-cook-img{
+        width: 100%;
+    }
+    .section__gallery-cook-block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+@media (max-width:500px){
+    .section__gallery-img-max{
+        object-position: center bottom;
+        object-fit: none;
+        height: 350px;
+    }
+    .section__gallery-block-inner:not(:last-child) {
+        margin-bottom: 0;
+    }
+    .section__gallery-min img{
+        margin-bottom: 10px;
+    }
+    .section__gallery-img-min{
+        max-width: 100%;
+    }
+    .section__gallery-block-inner{
+        display: block;
+    }
+    .section__gallery-min{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .section__gallery-img-min + .section__gallery-img-min{
+        margin-left: 0;
+    }
+    .section__bar-menu{
+        justify-content: center;
+    }
+    .bar__menu-block:not(:first-child){
+        display: none;
+    }
+    .bar__menu-price{
+        right: 65px;
+    }
+}
+@media (max-width:410px){
+    .food__menu-help-wrapper{
+        display: block;
+        flex-grow: 2;
+        align-items: center;
+    }
+    .line{
+        display: none;
+    }
+}
+
+/* @media (max-width:540px){
+    .nav {
+        display: none;
+    }
+    .section__order-food-menu{
+        display: block;
+    }
+    .section__history-inner{
+        display: block;
+    }
+    .section__bar-menu:not(:first-child){
+        display: none;
+    }
+} */
+/* Задать relative диву с карточками и отправить в вверх */
+/* Как будто бы везде не нужна тут высота и ширина картинок? */
+/* Популярные брейкпоинты 1366x768	1024x768	375x480
+1600x900	768x1024	480x320
+1920x1080*/
+/* Рекомендед сделать */
+/* Шрифты */
+/* Читать флекс бокс на 630 добавить бургер */
+/* И исправить все картники? */
+/*  */
